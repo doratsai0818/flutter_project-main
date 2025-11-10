@@ -1,0 +1,40 @@
+name: Deploy Flutter Web to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 當程式碼推送到 main 分支時觸發自動部署
+  workflow_dispatch: # 允許您在 GitHub Actions 頁面手動運行部署
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      # 設置 Flutter 環境
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Web Release
+        # 使用正確的 --base-href，請確保 'flutter_project-main' 是您的 GitHub 倉庫名稱
+        run: flutter build web --release --base-href "/flutter_project-main/"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          # 將建置結果推送到 gh-pages 分支，供 GitHub Pages 使用
+          publish_branch: gh-pages
+          # 設置 commit 的作者資訊
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
