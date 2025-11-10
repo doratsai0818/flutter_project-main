@@ -85,7 +85,7 @@ class SensorDataPage extends StatefulWidget {
 }
 
 class _SensorDataPageState extends State<SensorDataPage> {
-  final String _baseUrl = 'http://localhost:3000/api';
+  final String _baseUrl = ' https://unequatorial-cenogenetically-margrett.ngrok-free.dev/api';
   final Map<String, dynamic> _sensorData = {};
   bool _isLoading = true;
   bool _hasError = false;

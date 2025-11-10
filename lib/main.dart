@@ -14,7 +14,7 @@ import 'package:iot_project/my_account_page.dart';
 import 'package:iot_project/fan_control_page.dart';
 import 'package:iot_project/sensor_data_page.dart';
 
-const String baseUrl = 'http://localhost:3000/api';
+const String baseUrl = ' https://unequatorial-cenogenetically-margrett.ngrok-free.dev/api';
 
 void main() {
   runApp(const MyApp());

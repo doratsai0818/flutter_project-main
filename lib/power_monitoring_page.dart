@@ -18,7 +18,7 @@ class TokenService {
 
 // API 服務
 class ApiService {
-  static const String baseUrl = 'http://localhost:3000';
+  static const String baseUrl = ' https://unequatorial-cenogenetically-margrett.ngrok-free.dev';
   
   static Future<Map<String, String>> _getHeaders() async {
     final token = await TokenService.getToken();

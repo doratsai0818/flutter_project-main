@@ -15,7 +15,7 @@ class FanControlPage extends StatefulWidget {
 }
 
 class _FanControlPageState extends State<FanControlPage> {
-  final String _baseUrl = 'http://localhost:3000/api';
+  final String _baseUrl = ' https://unequatorial-cenogenetically-margrett.ngrok-free.dev/api';
 
   // 風扇狀態變數（本地狀態管理）
   bool _isFanOn = false;

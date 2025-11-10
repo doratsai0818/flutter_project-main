@@ -15,7 +15,7 @@ class NotificationHistoryPage extends StatefulWidget {
 }
 
 class _NotificationHistoryPageState extends State<NotificationHistoryPage> {
-  final String _baseUrl = 'http://localhost:3000/api';
+  final String _baseUrl = ' https://unequatorial-cenogenetically-margrett.ngrok-free.dev/api';
 
   List<Map<String, dynamic>> _notifications = [];
   bool _isLoading = true;

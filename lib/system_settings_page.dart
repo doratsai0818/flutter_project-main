@@ -12,7 +12,7 @@ class SystemSettingsPage extends StatefulWidget {
 }
 
 class _SystemSettingsPageState extends State<SystemSettingsPage> {
-  final String _baseUrl = 'http://localhost:3000/api';
+  final String _baseUrl = ' https://unequatorial-cenogenetically-margrett.ngrok-free.dev/api';
 
   // 系統設定狀態
   bool _isDarkMode = false;
