@@ -28278,7 +28278,6 @@ case 3:p=b
 o=t.N
 o=A.w(o,o)
 o.t(0,"Content-Type","application/json")
-o.t(0,"ngrok-skip-browser-warning","true")
 if(p!=null)o.t(0,"Authorization","Bearer "+p)
 q=o
 s=1
@@ -98746,7 +98745,7 @@ s=6
 return A.D(A.akx(),$async$oA)
 case 6:m=a1
 s=7
-return A.D(A.KX(A.ea("https://unequatorial-cenogenetically-margrett.ngrok-free.dev/api/sensors/realtime"),m),$async$oA)
+return A.D(A.KX(A.ea(" https://unequatorial-cenogenetically-margrett.ngrok-free.dev/api/sensors/realtime"),m),$async$oA)
 case 7:l=a1
 if(l.b===200){e=l
 k=B.L.t4(A.c6(A.c5(e.e)).aI(e.w),null)
