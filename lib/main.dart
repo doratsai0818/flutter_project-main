@@ -97,6 +97,9 @@ class ApiService {
     final token = await TokenService.getToken();
     return {
       'Content-Type': 'application/json',
+      // ★★★ 加入這行來繞過 Ngrok 的瀏覽器警告頁面 ★★★
+      'ngrok-skip-browser-warning': 'true', 
+      
       if (token != null) 'Authorization': 'Bearer $token',
     };
   }
